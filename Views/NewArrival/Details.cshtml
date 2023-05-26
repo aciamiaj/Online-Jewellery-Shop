@@ -1,0 +1,57 @@
+﻿@model OnlineJewelleryShop.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<style>
+ .btn-red {
+  background-color: white;
+  color: #ad073d;
+  border: 1px solid#ad073d;
+}
+
+.btn-red:hover {
+  background-color: #ad073d;
+  color: white;
+  border: 1px solid #ad073d;
+}
+</style>
+
+<br />
+<br />
+<h2>Details</h2>
+<hr />
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" class="btn btn-outline-danger btn-red" asp-route-id="@Model?.ProductId">Edit</a> 
+    <a asp-action="NewArrival" class="btn btn-outline-danger btn-red">Back to New Arrivals</a>
+    <a asp-action="Products" class="btn btn-outline-danger btn-red">View All Products</a>
+</div>

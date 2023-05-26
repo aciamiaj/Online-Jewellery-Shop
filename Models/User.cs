@@ -1,0 +1,45 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+using RequiredAttribute = System.ComponentModel.DataAnnotations.RequiredAttribute;
+
+
+namespace OnlineJewelleryShop.Models
+{
+    public partial class User
+    {
+        public User()
+        {
+            Carts = new HashSet<Cart>();
+            Orders = new HashSet<Order>();
+        }
+
+        //[Remote("CheckId", "Login", AdditionalFields = "UserId")]
+        //[StringLength(4)]
+        [Required]
+        public string UserId { get; set; } = null!;
+        public string? FirstName { get; set; }
+        //[Required]
+        public string? LastName { get; set; }
+        //[RegularExpression(@"^\+?\d{0,2}\-?\d{3}\-?\d{3}\-?\d{4}$", ErrorMessage = "Invalid phone number")]
+        //[Phone(ErrorMessage = "Please enter a valid phone number.")]
+        public string? Phone { get; set; }
+        public string? Address { get; set; }
+        //[Required(ErrorMessage = "Please enter the postalcode")]
+        //[DataType(DataType.PostalCode)]
+        //[RegularExpression(@"^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$", ErrorMessage = "Invalid Zip Code")]
+        public string? ZipCode { get; set; }
+        public string? Country { get; set; }
+        public string? Province { get; set; }
+        [Required]
+        //[Required(ErrorMessage = "Please enter your Email Address")]
+        //[EmailAddress(ErrorMessage = "Invalid Email Address")]
+        public string? Email { get; set; }
+        //[Required(ErrorMessage = "Password is required")]
+        [Required]
+        public string? Password { get; set; }
+        public string? Role { get; set; }
+
+        public virtual ICollection<Cart> Carts { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
+    }
+}

@@ -1,0 +1,153 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = OnlineJewelleryShop
+build_property.RootNamespace = OnlineJewelleryShop
+build_property.ProjectDir = C:\Users\jdneu\Documents\Winter 2023\Web App. Dev using ASP.NET MVC\Week4\OnlineJewelleryShop - Copy (Working On)\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\jdneu\Documents\Winter 2023\Web App. Dev using ASP.NET MVC\Week4\OnlineJewelleryShop - Copy (Working On)
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Collection/AddDiamonds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVjdGlvblxBZGREaWFtb25kcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Collection/AddGold.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVjdGlvblxBZGRHb2xkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Collection/AddPearl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVjdGlvblxBZGRQZWFybC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Collection/Diamonds.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVjdGlvblxEaWFtb25kcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Collection/Gold.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVjdGlvblxHb2xkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Collection/Pearl.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29sbGVjdGlvblxQZWFybC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Jewellery/AddEarrings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxsZXJ5XEFkZEVhcnJpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Jewellery/AddNecklaces.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxsZXJ5XEFkZE5lY2tsYWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Jewellery/AddRings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxsZXJ5XEFkZFJpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Jewellery/Earrings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxsZXJ5XEVhcnJpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Jewellery/Necklaces.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxsZXJ5XE5lY2tsYWNlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Jewellery/Rings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmV3ZWxsZXJ5XFJpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Login/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQWNjZXNzRGVuaWVkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Login/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Login/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Login/UserLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVXNlckxvZ2luLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/AddCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxBZGRDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/AddProduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxBZGRQcm9kdWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/AddProductType.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxBZGRQcm9kdWN0VHlwZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/AddToCart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxBZGRUb0NhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/Checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxDaGVja291dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/NewArrival.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxOZXdBcnJpdmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/Products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxQcm9kdWN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/NewArrival/ViewAllProducts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV3QXJyaXZhbFxWaWV3QWxsUHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/jdneu/Documents/Winter 2023/Web App. Dev using ASP.NET MVC/Week4/OnlineJewelleryShop - Copy (Working On)/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fzwgxhta06

@@ -1,0 +1,88 @@
+﻿@model OnlineJewelleryShop.Models.Product
+
+@{
+    ViewData["Title"] = "AddEarrings";
+}
+
+<style>
+    .btn-red {
+        background-color: white;
+        color: #ad073d;
+        border: 1px solid#ad073d;
+    }
+
+    .btn-red:hover {
+        background-color: #ad073d;
+        color: white;
+        border: 1px solid #ad073d;
+    }
+
+    #success-message {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+</style>
+
+<br />
+<br />
+<h2>Add Earrings</h2>
+
+   @if (ViewBag.success != null && ViewBag.success)
+    {
+            <div id="success-message">
+            Registration Successful!
+            </div>
+    }
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddEarrings" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProductId" class="control-label"></label>
+                <input asp-for="ProductId" class="form-control" />
+                <span asp-validation-for="ProductId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductName" class="control-label"></label>
+                <input asp-for="ProductName" class="form-control" />
+                <span asp-validation-for="ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProductDescription" class="control-label"></label>
+                <input asp-for="ProductDescription" class="form-control" />
+                <span asp-validation-for="ProductDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <select asp-for="CategoryId" class ="form-control" asp-items="ViewBag.CategoryId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProdTypeId" class="control-label"></label>
+                <select asp-for="ProdTypeId" class ="form-control" asp-items="ViewBag.ProdTypeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="control-label"></label>
+                <input asp-for="ImagePath" class="form-control" />
+                <span asp-validation-for="ImagePath" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-outline-danger btn-red" />
+                <a href="/NewArrival/Products" class="btn btn-outline-danger btn-red">View All Products</a>
+            </div>
+        </form>
+    </div>
+
+
+    @section Scripts {
+        @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }

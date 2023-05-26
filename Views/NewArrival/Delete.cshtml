@@ -1,0 +1,60 @@
+﻿@model OnlineJewelleryShop.Models.Product
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<style>
+ .btn-red {
+  background-color: white;
+  color: #ad073d;
+  border: 1px solid#ad073d;
+}
+
+.btn-red:hover {
+  background-color: #ad073d;
+  color: white;
+  border: 1px solid #ad073d;
+}
+</style>
+
+<br />
+<br />
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ProductId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProductDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProductDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+    </dl><br />
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ProductId" />
+        <input type="submit" value="Delete" class="btn btn-outline-danger btn-red" /> 
+        <a asp-action="NewArrival" class="btn btn-outline-danger btn-red">Back to New Arrivals</a>
+        <a asp-action="Products" class="btn btn-outline-danger btn-red">View All Products</a>
+    </form>
+</div>

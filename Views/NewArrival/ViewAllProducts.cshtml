@@ -1,0 +1,97 @@
+﻿@model IEnumerable<OnlineJewelleryShop.Models.Product>
+
+@{
+    ViewData["Title"] = "ViewAllProducts";
+}
+
+<style>
+    .btn-red {
+        background-color: white;
+        color: #ad073d;
+        border: 1px solid#ad073d;
+    }
+
+        .btn-red:hover {
+            background-color: #ad073d;
+            color: white;
+            border: 1px solid #ad073d;
+        }
+
+    .text-center {
+        font-family: Gabriola;
+    }
+
+        .text-center p {
+            font-size: 1.5rem;
+            font-family: Gabriola;
+        }
+
+    .view-all {
+        text-align: right;
+    }
+
+</style>
+
+<br />
+<br />
+<div class="text-center">
+    <h1 class="display-4">J Jewellery</h1>
+    <p>"Celebrate your beauty and radiance with J Jewellery - where elegance and grace meet"</p>
+</div>
+<br />
+
+<div class="view-all">
+    <a asp-action="Products" class="btn btn-sm btn-outline-primary btn-red">Search Products</a>
+</div>
+
+<br />
+
+<div class="card-deck">
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img class="card-img-top" src="@product.ImagePath" alt="@product.ProductName" style="height: 400px">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.ProductName</h5>
+                        <p class="card-text">@((product.Price ?? 0).ToString("C"))</p>
+                        <a href="@Url.Action("Details", "NewArrival", new { id = product.ProductId })" class="btn btn-outline-danger btn-red">Details</a>
+                        <a href="@Url.Action("AddToCart", "NewArrival", new { id = product.ProductId })" class="btn btn-outline-danger btn-red">Add To Cart</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                @if (ViewBag.PageNumber > 1)
+                {
+                    <li class="page-item"><a class="btn btn-outline-danger btn-red" href="@Url.Action("ViewAllProducts", "NewArrival", new { page = ViewBag.PageNumber - 1, pageSize = ViewBag.PageSize })">Previous</a></li>
+                }
+
+                @for (int i = 1; i <= ViewBag.TotalPages; i++)
+                {
+                    if (i == ViewBag.PageNumber)
+                    {
+                        <li class="page-item active"><a class="btn btn-outline-danger btn-red" href="#">@i</a></li>
+                    }
+                    else
+                    {
+                        <li class="page-item"><a class="btn btn-outline-danger btn-red" href="@Url.Action("ViewAllProducts", "NewArrival", new { page = i, pageSize = ViewBag.PageSize })">@i</a></li>
+                    }
+                }
+
+                @if (ViewBag.PageNumber < ViewBag.TotalPages)
+                {
+                    <li class="page-item"><a class="btn btn-outline-danger btn-red" href="@Url.Action("ViewAllProducts", "NewArrival", new { page = ViewBag.PageNumber + 1, pageSize = ViewBag.PageSize })">Next</a></li>
+                }
+            </ul>
+        </nav>
+    </div>
+</div>
+

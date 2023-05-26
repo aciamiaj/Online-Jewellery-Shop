@@ -1,0 +1,55 @@
+﻿@model OnlineJewelleryShop.Models.ProductType
+
+@{
+    ViewData["Title"] = "AddProductType";
+}
+<style>
+ .btn-red {
+  background-color: white;
+  color: #ad073d;
+  border: 1px solid#ad073d;
+}
+
+.btn-red:hover {
+  background-color: #ad073d;
+  color: white;
+  border: 1px solid #ad073d;
+}
+</style>
+
+<br />
+<br />
+
+<h2>Add Product Type</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddProductType" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ProdTypeId" class="control-label"></label>
+                <input asp-for="ProdTypeId" class="form-control" />
+                <span asp-validation-for="ProdTypeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProdTypeName" class="control-label"></label>
+                <input asp-for="ProdTypeName" class="form-control" />
+                <span asp-validation-for="ProdTypeName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProdTypeDescription" class="control-label"></label>
+                <input asp-for="ProdTypeDescription" class="form-control" />
+                <span asp-validation-for="ProdTypeDescription" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-outline-danger btn-red" />
+                <a asp-action="Products" class="btn btn-outline-danger btn-red">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

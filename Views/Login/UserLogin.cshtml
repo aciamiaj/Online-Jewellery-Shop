@@ -1,0 +1,61 @@
+﻿@model OnlineJewelleryShop.Models.UserLogin
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Login";
+    var Url = ViewData["returnUrl"] as string;
+    Url = System.Net.WebUtility.UrlEncode(Url);
+    //Convert test string into url encoded string
+    var error = TempData["ErrorMessage"] as string;
+}
+
+<style>
+    .btn-red {
+        background-color: white;
+        color: #ad073d;
+        border: 1px solid#ad073d;
+    }
+
+        .btn-red:hover {
+            background-color: #ad073d;
+            color: white;
+            border: 1px solid #ad073d;
+        }
+</style>
+
+
+<br />
+<br />
+<h1> Login </h1>
+
+@if (!string.IsNullOrEmpty(error))
+{
+    <h5 class="alert-danger pt-2 pb-2 m-2">@error</h5>
+}
+
+<div class="row mt-3">
+    <div class="col-4">
+        <form action="/Login/Login?returnUrl=@Url" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <div class="form-group">
+                <label asp-for="UserName" class="control-label"></label>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" type="password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <br />
+
+            <button type="submit" class="btn btn-outline-danger btn-red">Login</button>
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

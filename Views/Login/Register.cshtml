@@ -1,0 +1,112 @@
+﻿@model OnlineJewelleryShop.Models.User
+
+@{
+    ViewData["Title"] = "RegisterUser";
+}
+
+<style>
+ .btn-red {
+  background-color: white;
+  color: #ad073d;
+  border: 1px solid#ad073d;
+}
+
+.btn-red:hover {
+  background-color: #ad073d;
+  color: white;
+  border: 1px solid #ad073d;
+}
+
+  #success-message {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+ }
+
+</style>
+<br />
+<h2>Register</h2>
+
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="RegisterUser" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="UserId" class="control-label"></label>
+                <input asp-for="UserId" class="form-control" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone" class="control-label"></label>
+                <input asp-for="Phone" class="form-control" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZipCode" class="control-label"></label>
+                <input asp-for="ZipCode" class="form-control" />
+                <span asp-validation-for="ZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <input asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Province" class="control-label"></label>
+                <input asp-for="Province" class="form-control" />
+                <span asp-validation-for="Province" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Role" class="control-label"></label>
+                <input asp-for="Role" class="form-control" />
+                <span asp-validation-for="Role" class="text-danger"></span>
+            </div><br />
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-outline-danger btn-red" />
+                <a href="/NewArrival/NewArrival" class="btn btn-outline-danger btn-red">Back to Home</a>
+            </div>
+        </form>
+    </div>
+</div>
+@if (ViewBag.success != null && ViewBag.success)
+{
+    <div id="success-message">
+        Registration Successful!
+    </div>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

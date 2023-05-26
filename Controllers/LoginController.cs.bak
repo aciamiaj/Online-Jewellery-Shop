@@ -1,0 +1,153 @@
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using OnlineJewelleryShop.Models;
+using System.Security.Claims;
+
+namespace OnlineJewelleryShop.Controllers
+{
+    public class LoginController : Controller
+    {
+        private readonly JjewelleryContext _dbContext;
+
+        public LoginController(JjewelleryContext dbContext)
+        {
+            _dbContext = dbContext;
+        }
+        // Returns the Index view
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        // Returns the Register view
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+
+        [HttpPost]
+        public IActionResult RegisterUser(User user)
+        {
+            if (ModelState.IsValid)
+            {
+                // Check if the user ID already exists
+                if (_dbContext.Users.Any(u => u.UserId == user.UserId))
+                {
+                    // Add an error message to the ModelState dictionary if the user ID already exists
+                    ModelState.AddModelError("UserId", "User ID already exists.");
+                }
+                else
+                {
+                    // Save the new user to the database
+                    _dbContext.Users.Add(user);
+                    _dbContext.SaveChanges();
+                    // Set a flag to indicate success
+                    ViewBag.success = true;
+                }
+                // Redirect to the Login action after processing the registration
+                return RedirectToAction("Login");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                // If the model state is invalid, return the registration view with errors
+                return View("Register", user);
+            }
+
+            // If everything is successful, redirect to the login page
+            return RedirectToAction("Login");
+        }
+
+        [HttpGet]
+        public IActionResult Login(string ReturnUrl)
+        {
+            // If return URL is not provided, get it from the request headers
+            if (string.IsNullOrEmpty(ReturnUrl))
+            {
+                ReturnUrl = Request.Headers["Referer"];
+            }
+            // Set the return URL as view data
+            ViewData["returnUrl"] = ReturnUrl;
+            // Return the login view
+            return View("UserLogin");
+        }
+
+
+        // Return the access denied view
+        [HttpGet]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public async Task<IActionResult> Logout()
+        {
+            // Sign out the user
+            await HttpContext.SignOutAsync();
+            // Redirect to the home page
+            return Redirect("/");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(UserLogin user, string returnUrl)
+        {
+            bool result = false;
+
+            if (ModelState.IsValid)
+            {
+
+            
+
+                // Find the user in the database
+                var existingUser = _dbContext.Users.FirstOrDefault(u => u.UserId == user.UserName && u.Password == user.Password);
+
+            if (existingUser != null)
+            {
+                result = true;
+            }
+            // If the user exists in the database, create a claims identity for them and sign them in
+            if (result)
+            {
+                var claims = new List<Claim>();
+                claims.Add(new Claim(ClaimTypes.Name, existingUser.UserId));
+
+                claims.Add(new Claim(ClaimTypes.Role, existingUser.Role));
+
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                var claimsPrincipal = new ClaimsPrincipal(claimsIdentity);
+
+                //Sign in
+                //await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal);
+
+                // Sign in the user with the specified authentication scheme and add a cookie to their browser
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, claimsPrincipal, new AuthenticationProperties
+                {
+                    IsPersistent = true, // set to true if you want the cookie to persist across sessions
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(30) // set to the desired expiration time
+                });
+
+                // Redirect the user to the specified returnUrl, or to the home page if none is specified
+                if (!string.IsNullOrEmpty(returnUrl))
+                {
+                    if (returnUrl.Contains("Register"))
+                        return Redirect("/");
+                    else
+                        return Redirect(returnUrl);
+                }
+                else
+                    return Redirect("/");
+
+            }
+            }
+            TempData["ErrorMessage"] = "Invalid username or password";
+            return View("login");
+ 
+        }
+
+    }
+}
